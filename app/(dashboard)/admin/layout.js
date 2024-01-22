@@ -1,6 +1,5 @@
 import { Inter, DM_Sans } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/section/user/navbar";
+import "@/app/globals.css";
 
 const inter = DM_Sans({
   subsets: ["latin"],
@@ -8,17 +7,14 @@ const inter = DM_Sans({
 });
 
 export const metadata = {
-  title: "Super-CBT",
+  title: "CBT",
   description: "Computer Based Test",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <Navbar />
-        <main className='container h-full'>{children}</main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
